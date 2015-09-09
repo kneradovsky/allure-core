@@ -9,6 +9,9 @@
     </parent>
 
     <artifactId>allure-report-face</artifactId>
+    <groupId>ru.yandex.qatools.allure</groupId>
+    <version>1.4.5-jenkins</version>
+    
     <packaging>war</packaging>
 
     <name>Allure Report Face</name>

@@ -8,6 +8,8 @@
     <modelVersion>4.0.0</modelVersion>
 
     <artifactId>allure-commons</artifactId>
+    <groupId>ru.yandex.qatools.allure</groupId>
+    <version>1.4.5-jenkins</version>
     <name>Allure Commons</name>
 
     <dependencies>
