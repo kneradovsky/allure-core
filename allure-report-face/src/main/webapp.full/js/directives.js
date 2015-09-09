@@ -28,7 +28,7 @@ angular.module('allure.directives', [])
             },
             link: function(scope, elm) {
                 var tmpl = '<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="110" height="14" id="clippy">' +
-                    '<embed wmode="opaque" src="flash/clippy.swf" width="120" height="14" name="clippy" quality="high" allowScriptAccess="always" ' +
+                    '<embed wmode="opaque" src="/userContent/allure/flash/clippy.swf" width="120" height="14" name="clippy" quality="high" allowScriptAccess="always" ' +
                     'type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" ' +
                     'FlashVars="text={{text}}" bgcolor="#FFF" />' +
                 '</object>';
