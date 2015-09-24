@@ -21,7 +21,7 @@ angular.module('allure.testcase.statusSwitcher', []).directive('statusSwitcher',
     };
     var store = new StatusesStore();
     return {
-        templateUrl: 'templates/testcase/status-switcher.html',
+        templateUrl: '/userContent/allure/templates/testcase/status-switcher.html',
         scope: {
             statuses: '=',
             statistic: '='

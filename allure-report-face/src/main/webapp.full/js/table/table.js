@@ -5,7 +5,7 @@ angular.module('allure.table', [])
         return {
             replace: true,
             transclude: true,
-            templateUrl: 'templates/table/table.html',
+            templateUrl: '/userContent/allure/templates/table/table.html',
             scope: {
                 sorting: '=?'
             },

@@ -21,7 +21,7 @@ angular.module('allure.testcase.provider', []).provider('testcase', function($st
 
                 };
             state.views[viewName] = {
-                templateUrl: 'templates/testcase/testcaseView.html',
+                templateUrl: '/userContent/allure/templates/testcase/testcaseView.html',
                 controller: 'TestcaseCtrl'
             };
             $stateProvider.state(baseState+'.testcase', state)
