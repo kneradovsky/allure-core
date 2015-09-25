@@ -256,7 +256,7 @@
     <xsl:template name="add-title-node">
         <xsl:if test="count(title) = 0">
             <xsl:element name="title">
-                <xsl:value-of select="utils:humanize(name/text())"/>
+                <xsl:value-of select="name/text()"/>
             </xsl:element>
         </xsl:if>
     </xsl:template>

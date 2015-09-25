@@ -9,7 +9,7 @@
 
     <artifactId>allure-report-data</artifactId>
     <groupId>ru.yandex.qatools.allure</groupId>
-    <version>1.4.5-jenkins</version>
+    <version>1.4.5-jencba</version>
 
     <modelVersion>4.0.0</modelVersion>
 
