@@ -1,4 +1,4 @@
-# Allure standalone static files fork
+# Allure standalone fork
 
 
 The fork is intended to solve the size of the report problem. Each report contains all javascript dependencies and static files. The take about 10Mb of disk space. If you have about 100 test runs a day - your disk drive will run out of disk space soon. The problem is that almost all of that 10Mb are Javascripts dependencies and static files, the report data itself takes significantly less than 1Mb. The solution is to move the static files to the webroot folder of your webserver. You can then place a report to any folder of your server. 
