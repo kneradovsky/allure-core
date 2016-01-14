@@ -383,7 +383,7 @@
         <profile>
             <id>integration-tests</id>
             <activation>
-                <activeByDefault>true</activeByDefault>
+                <activeByDefault>false</activeByDefault>
             </activation>
             <modules>
                 <module>allure-e2e</module>
