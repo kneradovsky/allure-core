@@ -2,7 +2,7 @@
 angular.module('allure.testcase.testcasesList', []).directive('testcasesList', function() {
     'use strict';
     return {
-        templateUrl: '/userContent/allure/templates/testcase/list.html',
+        templateUrl: '/allure/templates/testcase/list.html',
         controller: 'TestCasesCtrl',
         scope: {
             testcases: '=testcasesList',

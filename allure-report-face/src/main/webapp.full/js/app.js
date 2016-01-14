@@ -33,7 +33,7 @@ angular.module('allure', ['pascalprecht.translate', 'angular-loading-bar', 'ngAn
         $stateProvider
             .state('overview', {
                 url: '/',
-                templateUrl: "/userContent/allure/templates/overview.html",
+                templateUrl: "/allure/templates/overview.html",
                 controller: 'OverviewCtrl',
                 resolve: {
                     overview: function($http) {
@@ -49,7 +49,7 @@ angular.module('allure', ['pascalprecht.translate', 'angular-loading-bar', 'ngAn
             })
             .state('defects', {
                 url: '/defects',
-                templateUrl: "/userContent/allure/templates/defects.html",
+                templateUrl: "/allure/templates/defects.html",
                 controller: 'DefectsCtrl',
                 resolve: {
                     defects: function($http) {
@@ -65,7 +65,7 @@ angular.module('allure', ['pascalprecht.translate', 'angular-loading-bar', 'ngAn
             })
             .state('home', {
                 url: "/home",
-                templateUrl: "/userContent/allure/templates/home.html",
+                templateUrl: "/allure/templates/home.html",
                 controller: 'HomeCtrl',
                 resolve: {
                     testsuites: function($http) {
@@ -81,7 +81,7 @@ angular.module('allure', ['pascalprecht.translate', 'angular-loading-bar', 'ngAn
             })
             .state('graph', {
                 url: '/graph',
-                templateUrl: "/userContent/allure/templates/graph.html",
+                templateUrl: "/allure/templates/graph.html",
                 controller: 'GraphCtrl',
                 resolve: {
                     testcases: testcasesResolve
@@ -89,7 +89,7 @@ angular.module('allure', ['pascalprecht.translate', 'angular-loading-bar', 'ngAn
             })
             .state('timeline', {
                 url: '/timeline',
-                templateUrl: "/userContent/allure/templates/timeline.html",
+                templateUrl: "/allure/templates/timeline.html",
                 controller: 'TimelineCtrl',
                 resolve: {
                     data: function($http) {
@@ -99,7 +99,7 @@ angular.module('allure', ['pascalprecht.translate', 'angular-loading-bar', 'ngAn
             })
             .state('features', {
                 url: '/features',
-                templateUrl: "/userContent/allure/templates/features.html",
+                templateUrl: "/allure/templates/features.html",
                 controller: 'FeaturesCtrl',
                 resolve: {
                     features: function($http) {
@@ -120,7 +120,7 @@ angular.module('allure', ['pascalprecht.translate', 'angular-loading-bar', 'ngAn
     })
     .config(function($translateProvider) { 
         $translateProvider.useStaticFilesLoader({
-          prefix: '/userContent/allure/translations/',
+          prefix: '/allure/translations/',
           suffix: '.json'
         });
         $translateProvider.addInterpolation('$translateMessageFormatInterpolation');
