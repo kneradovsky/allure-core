@@ -1,23 +1,28 @@
-# Allure
-
-[![release](http://github-release-version.herokuapp.com/github/allure-framework/allure-core/release.svg?style=flat)](https://github.com/allure-framework/allure-core/releases/latest) [![Maven Central](https://maven-badges.herokuapp.com/maven-central/ru.yandex.qatools.allure/allure-core/badge.svg?style=flat)](https://maven-badges.herokuapp.com/maven-central/ru.yandex.qatools.allure/allure-core) [![build](https://img.shields.io/teamcity/http/teamcity.qatools.ru/s/allure_core_master_deploy.svg?style=flat)](http://teamcity.qatools.ru/viewType.html?buildTypeId=allure_core_master_deploy&guest=1)
-
-
-![image](https://raw.github.com/allure-framework/allure-core/master/allure-dashboard.png)
+# Allure jenkins fork
 
 A flexible, lightweight multi-language test report tool, with the possibility of adding to the report of additional information such as screenshots, logs and so on.
 
-## Who uses Allure
-Currently Allure Framework is widely used in internal testing of [Yandex](http://company.yandex.com/) software products. Hundreds of software testers every day are giving a high note to their experience with Allure.
+The fork is intended to solve the size of the report problem. Each report contains all javascript dependencies and static files. The take about 10Mb of disk space. If you have about 100 test runs a day - your disk drive will run out of disk space soon. The problem is that almost all of that 10Mb are Javascripts dependencies and static files, the report data itself takes significantly less than 1Mb. The solution is to move the static files to the Jenkins static contents folder - $Jenkins_Home/userContent
 
-## Getting Started
 
-* [An example report](http://teamcity.qatools.ru/repository/download/allure_core_master_release/lastSuccessful/index.html#/home)
-* [Documentation](https://github.com/allure-framework/allure-core/wiki)
-* [Examples](https://github.com/allure-examples)
-* [Issue Tracking](https://github.com/allure-framework/allure-core/issues?labels=&milestone=&page=1&state=open)
-* [CI](http://teamcity.qatools.ru/)
-* [Releases and Changelog](https://github.com/allure-framework/allure-core/releases)
+## Set up your Jenkins
+Copy the contents of the src/main/webapp.full/ to the $Jenkins_Home/userContent
 
-## Contact us
-Mailing list: [allure@yandex-team.ru](mailto:allure@yandex-team.ru)
+## Build and deploy the artifacts
+The allure-report-face depends on 
+ * allure-report-data
+ * allure-model
+ * allure-commons
+ 
+You will need to deploy all these artifact on your organization's maven repository to make the custom version report generation work.
+
+Just build the the allure-core by __mvn install -DskipTests=true__ command. It will build and deploy the artifacts to you local maven repository. And then you need manually deploy 
+ * allure-report-data
+ * allure-model
+ * allure-commons
+ * allure-report-face
+to your organization maven repo.
+ 
+
+## Use it
+In the "Allure Report generation" post build task set the custom report version to the "1.4.5-jencba"
