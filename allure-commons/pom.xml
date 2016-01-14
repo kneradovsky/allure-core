@@ -9,7 +9,7 @@
 
     <artifactId>allure-commons</artifactId>
     <groupId>ru.yandex.qatools.allure</groupId>
-    <version>1.4.5-jencba</version>
+    <version>1.4.5-standalone</version>
     <name>Allure Commons</name>
 
     <dependencies>
